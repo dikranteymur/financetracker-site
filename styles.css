@@ -321,12 +321,22 @@ nav {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .screenshot-item {
-  flex: 0 0 auto;
+  flex: 0 0 220px;
   width: 220px;
+}
+
+@media (max-width: 720px) {
+  .screenshots-scroll {
+    flex-wrap: wrap;
+  }
+  .screenshot-item {
+    flex: 0 0 160px;
+    width: 160px;
+  }
 }
 
 .screenshot-item img {
